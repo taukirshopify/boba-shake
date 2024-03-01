@@ -1,0 +1,76 @@
+<div class="feature-list section-id-{{ section.id }}">
+     <div class="container-xxl">
+       <div class="row">
+      {% for i in section.blocks %}
+        <div class="col-md-6 col-lg-3">
+          <div class="singel-feature-list text-center">
+        
+              <img src="{{ i.settings.bg | img_url:'master' }}" alt="">
+
+             <h6 class="poppins-bold">{{ i.settings.h5 }}</h6>
+             <p>{{ i.settings.p  }}</p>
+          </div>
+       </div>
+      {% endfor %}
+      </div>
+    </div>
+</div>
+
+<style>
+  .singel-feature-list{
+   padding:1.5% ;
+  }
+  .feature-list {
+    margin-top: 8px;
+    margin-bottom: 1.5%;
+}
+.singel-feature-list p{
+ color:rgba(30, 30, 30, 0.5);
+ margin-top:8px
+}
+.singel-feature-list h6 {
+  font-size: 18px;
+  margin-top: 17px;
+}
+</style>
+{% schema %}
+  {
+    "name": "Home Featured Icon",
+  
+    "blocks": [
+      {
+        "type": "Item",
+        "name": "Item",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "bg",
+            "label": "Select your Image"
+          },
+          {
+            "type": "text",
+            "id": "h5",
+            "label": "Title",
+            "default": "Gratis verzending"
+          }, {
+            "type": "text",
+            "id": "p",
+            "label": "Description",
+            "default": "Voor alle pre-orders boven €60,-"
+          }
+        ]
+      }
+    ],
+    
+    "presets": [
+      {
+        "name": "Home Featured Icon"}
+      ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

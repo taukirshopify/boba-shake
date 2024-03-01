@@ -1,0 +1,69 @@
+<div class="feature-benner section-id-{{ section.id }}">
+     <div class="container-xxl">
+       <div class="row">
+        <div class="col-12">
+        <h3 class="text-center"><a href="{{ section.settings.url }}" class="poppins-bold">@bobashake</a>
+      </h3>
+        </div>
+      {% for i in section.blocks %}
+        <div class="col-md-2">
+          <div class="singel-feature-benner">
+            <a href="{{ i.settings.url }}">
+              <img src="{{ i.settings.bg | img_url:'master' }}" alt="">
+            </a>
+            
+          </div>
+       </div>
+      {% endfor %}
+      </div>
+    </div>
+</div>
+
+<style>
+
+ .feature-benner h3 {
+    margin-bottom: 1%;
+}
+.singel-feature-list img{
+ margin: 0 auto;
+}
+.section-id-{{ section.id }}
+img {
+  margin: 0 auto;
+}
+</style>
+{% schema %}
+  {
+    "name": "Home Instagram",
+  
+    "blocks": [
+      {
+        "type": "Item",
+        "name": "Item",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "bg",
+            "label": "Select your Image"
+          },
+ {
+  "type": "url",
+  "id": "url",
+  "label": "Select your Url"
+ }
+        ]
+      }
+    ],
+    
+    "presets": [
+      {
+        "name": "Home Instagram"}
+      ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,17 @@
+<ul class="product-tag">
+  {% for tag in product.tags %}
+  <li class="tag_item">{{ tag }}</li>
+  
+  {% endfor %}
+</ul>
+<style>
+  .product-tag li {
+    display: inline-block;
+    background: #d9b18f;
+    padding: 6px 15px;
+    border-radius: 28px;
+    font-weight: 700;
+    color: #FFF;
+    margin-right: 4px;
+}
+</style>

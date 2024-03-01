@@ -1,0 +1,75 @@
+<div class="feature-benner section-id-{{ section.id }}">
+     <div class="container-xxl">
+       <div class="row">
+      {% for i in section.blocks %}
+        <div class="col-lg-6">
+          <div class="singel-feature-benner position-relative">
+            <img src="{{ i.settings.bg | img_url:'master' }}" alt="">
+            <h3 class="underline-hover poppins-bold">{{ i.settings.h2 }}</h3>
+          </div>
+       </div>
+      {% endfor %}
+      </div>
+    </div>
+</div>
+
+<style>
+  .position-relative {
+    position: relative!important;
+}
+  .singel-feature-benner img{
+   border-radius:24px;
+   width: 100%;
+  }
+  .feature-benner {
+    margin: 3% 0px;
+}
+.singel-feature-benner{
+ margin:2% 0;
+}
+.singel-feature-benner h3{
+
+  font-size: 32px;
+  line-height: 1;
+  color: #fff;
+  position: absolute;
+  bottom:  10%;
+  left: 4%;
+
+}
+</style>
+{% schema %}
+  {
+    "name": "Home Feature benner",
+    "blocks": [
+      {
+        "type": "Item",
+        "name": "Item",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "bg",
+            "label": "Select your Image"
+          },
+          {
+            "type": "text",
+            "id": "h2",
+            "label": "Title",
+            "default": "Classic Milk Tea"
+          }
+        ]
+      }
+    ],
+    
+    "presets": [
+      {
+        "name": "Home Feature benner"}
+      ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

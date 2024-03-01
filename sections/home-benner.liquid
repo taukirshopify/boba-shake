@@ -1,0 +1,165 @@
+<link rel="preload" as="image" href="{{ section.settings.mbg | img_url: width: 3840}}">
+<link rel="preload" as="image" href="{{ section.settings.bg | img_url: width: 3840}}">
+
+
+<div class="benner section-id-{{ section.id }}">
+     <div class="container-xxl reverse-mobile">
+       <div class="row">
+         <div class="col-12">
+            <div class="benner-wrapper">
+
+                 <div class="benner-image">
+                  <img src="{{ section.settings.mbg | img_url: 'master'}}" class="mobile-image" alt="">
+                  {% comment %} {{ section.settings.mbg | image_url: width: 3840 | image_tag:
+          
+                    height: '521',
+                    preload: true,
+                    sizes: "100vw",
+                class: 'mobile-image',
+                format: 'webp',
+                    widths: '375, 550, 750, 1100, 1500'
+                  }} {% endcomment %}
+                  <img src="{{ section.settings.bg | img_url:  'master'}}" class="desktop-image" alt="">
+                  {% comment %} {{ section.settings.bg | image_url: width: 3840 | image_tag:
+          
+                    height: '521',
+                    preload: true,
+                    sizes: "100vw",
+                class: 'desktop-image',
+                format: 'webp',
+                    widths: '100 , 200 ,375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                  }}
+         {% endcomment %}
+
+                 </div>
+                 <div class="bener-content">
+                      
+                    <h1 class=" text-uppercase poppins-bold">{{ section.settings.h2 }}</h1>
+                    <a href="{{ section.settings.link }}" class="{{ section.settings.vertical_alignment }} text-uppercase d-inline-block">{{ section.settings.btn }}</a>
+                 </div>
+             </div>
+         </div>
+      </div>
+    </div>
+</div>
+<style>
+.section-id-{{ section.id }} {
+    background: url();
+
+}
+.benner-image img {
+  width: 100%;
+}
+.benner-wrapper {
+  position: relative;
+  margin-bottom:2%;
+}
+
+.bener-content {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform:  translateY(-50%);
+}
+.benner-image img {
+  border-radius: 24px;
+}
+.bener-content  h1{
+ font-size:64px;
+ line-height:1;
+ color: #fff;
+
+}
+.desktop-image 
+{
+  display: block;
+}
+.mobile-image 
+{
+  display: none;
+}
+
+@media only screen and (max-width: 750px) {
+  .benner-image img {
+    border-radius: 0;
+}
+.desktop-image {
+    display: none;
+}
+.mobile-image {
+    display: block;
+}
+
+.bener-content  h1 {
+  font-size: 38px;
+
+}
+
+
+}
+
+</style>
+{% schema %}
+  {
+    "name": "Home Banner ",
+    "settings": [
+  {
+    "type": "image_picker",
+    "id": "bg",
+    "label": "Select your backgound"
+  },
+  {
+    "type": "image_picker",
+    "id": "mbg",
+    "label": "Select your backgound Mobile"
+  },
+  {
+    "type": "text",
+    "id": "h2",
+    "label": "Title",
+    "default": "WHEY BETTER <br> THAN BOBA <br> TEA"
+  },
+
+  {
+    "type": "select",
+    "id": "vertical_alignment",
+    "label": "Button Style",
+    "options": [
+      {
+        "value": "btn-primary",
+        "label": "Primary "
+      },
+      {
+        "value": "btn-secondary",
+        "label": "secondary"
+      }
+    ],
+    "default": "btn-primary"
+  }
+,  
+  {
+    "type": "text",
+    "id": "btn",
+    "label": "Button title",
+    "default": "SHOP NU"
+  },
+  {
+    "type": "url",
+    "id": "link",
+    "label": "Benner link"
+  }
+    ],
+    "presets": [
+      {
+        "name": "Home banner"}
+      ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

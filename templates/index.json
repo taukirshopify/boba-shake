@@ -1,0 +1,185 @@
+{
+  "sections": {
+    "home_benner_9MmNwT": {
+      "type": "home-benner",
+      "settings": {
+        "bg": "shopify:\/\/shop_images\/Above_the_fold_background.jpg",
+        "mbg": "shopify:\/\/shop_images\/Above_the_fold_banner_1.jpg",
+        "h2": "WHEY BETTER <br> THAN BOBA <br> TEA",
+        "vertical_alignment": "btn-primary",
+        "btn": "SHOP NU",
+        "link": ""
+      }
+    },
+    "home_featureproducts_WCUAbL": {
+      "type": "home-featureproducts",
+      "settings": {
+        "collection": "frontpage",
+        "h2": "Trending",
+        "p": "Dagelijkse voeding met Aziatisch geïnspireerde smaak",
+        "btn": "Bekijk alles",
+        "link": ""
+      }
+    },
+    "home_featurecontent_8Jk8R9": {
+      "type": "home-featurecontent",
+      "settings": {
+        "bg": "shopify:\/\/shop_images\/Sectie_3_background.jpg",
+        "mbg": "shopify:\/\/shop_images\/Sectie_3_background_3.png",
+        "h1": "WHEY BETTER <br> THAN BOBA <br> TEA",
+        "vertical_alignment": "btn-primary",
+        "h2": "Welkom bij onze eerste pre-order!",
+        "p": "Verzeker jezelf van dit smaakvolle, voedzame product door vooraf te bestellen. Geniet van exclusieve toegang, speciale kortingen en behoor tot de eersten die deze onweerstaanbare smaakervaring ervaren.",
+        "btn": "SHOP NU",
+        "link": ""
+      }
+    },
+    "home_feature_benner_iWWLjN": {
+      "type": "home-feature-benner",
+      "blocks": {
+        "item_AJ6TEh": {
+          "type": "Item",
+          "settings": {
+            "bg": "shopify:\/\/shop_images\/Sectie_3_background.png",
+            "h2": "Classic Milk Tea"
+          }
+        },
+        "item_RaKBmJ": {
+          "type": "Item",
+          "settings": {
+            "bg": "shopify:\/\/shop_images\/Sectie_3_background_1.png",
+            "h2": "Classic Milk Tea"
+          }
+        }
+      },
+      "block_order": [
+        "item_AJ6TEh",
+        "item_RaKBmJ"
+      ],
+      "settings": {
+      }
+    },
+    "home_benner_baX3tt": {
+      "type": "home-benner",
+      "settings": {
+        "bg": "shopify:\/\/shop_images\/Sectie_3_background_4.png",
+        "mbg": "shopify:\/\/shop_images\/Sectie_3_background_5.png",
+        "h2": "Welkom bij onze<br>  eerste pre-order!",
+        "vertical_alignment": "btn-secondary",
+        "btn": "SHOP NU",
+        "link": ""
+      }
+    },
+    "home_instagram_La4pDE": {
+      "type": "home-instagram",
+      "blocks": {
+        "item_JLhJH7": {
+          "type": "Item",
+          "settings": {
+            "bg": "shopify:\/\/shop_images\/Sectie_7_3.png",
+            "url": ""
+          }
+        },
+        "item_gPhMXd": {
+          "type": "Item",
+          "settings": {
+            "bg": "shopify:\/\/shop_images\/Sectie_7_1.png",
+            "url": ""
+          }
+        },
+        "item_PXd4kL": {
+          "type": "Item",
+          "settings": {
+            "bg": "shopify:\/\/shop_images\/Sectie_7_2.png",
+            "url": ""
+          }
+        },
+        "item_8GjjVU": {
+          "type": "Item",
+          "settings": {
+            "bg": "shopify:\/\/shop_images\/Sectie_7_3.png",
+            "url": ""
+          }
+        },
+        "item_ebwBCV": {
+          "type": "Item",
+          "settings": {
+            "bg": "shopify:\/\/shop_images\/Sectie_7_1.png",
+            "url": ""
+          }
+        },
+        "item_iLijQK": {
+          "type": "Item",
+          "settings": {
+            "bg": "shopify:\/\/shop_images\/Sectie_7_1.png",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_JLhJH7",
+        "item_gPhMXd",
+        "item_PXd4kL",
+        "item_8GjjVU",
+        "item_ebwBCV",
+        "item_iLijQK"
+      ],
+      "settings": {
+      }
+    },
+    "home_list_bMARKG": {
+      "type": "home-list",
+      "blocks": {
+        "item_yMwCRm": {
+          "type": "Item",
+          "settings": {
+            "bg": "shopify:\/\/shop_images\/Group_1_b8564b66-be0d-4b3d-859d-2444bffe4b98.svg",
+            "h5": "Gratis verzending",
+            "p": "Voor alle pre-orders boven €60,-"
+          }
+        },
+        "item_zMiQjC": {
+          "type": "Item",
+          "settings": {
+            "bg": "shopify:\/\/shop_images\/Group_1_1.svg",
+            "h5": "Gratis verzending",
+            "p": "Voor alle pre-orders boven €60,-"
+          }
+        },
+        "item_bEGbCH": {
+          "type": "Item",
+          "settings": {
+            "bg": "shopify:\/\/shop_images\/Group_1_b8564b66-be0d-4b3d-859d-2444bffe4b98.svg",
+            "h5": "Gratis verzending",
+            "p": "Voor alle pre-orders boven €60,-"
+          }
+        },
+        "item_wfEpLb": {
+          "type": "Item",
+          "settings": {
+            "bg": "shopify:\/\/shop_images\/Group_1_1.svg",
+            "h5": "Gratis verzending",
+            "p": "Voor alle pre-orders boven €60,-"
+          }
+        }
+      },
+      "block_order": [
+        "item_yMwCRm",
+        "item_zMiQjC",
+        "item_bEGbCH",
+        "item_wfEpLb"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "home_benner_9MmNwT",
+    "home_featureproducts_WCUAbL",
+    "home_featurecontent_8Jk8R9",
+    "home_feature_benner_iWWLjN",
+    "home_benner_baX3tt",
+    "home_instagram_La4pDE",
+    "home_list_bMARKG"
+  ]
+}

@@ -1,0 +1,175 @@
+<div class="feature-content section-id-{{ section.id }}">
+     <div class="container-xxl">
+       <div class="row">
+       <div class="col-lg-9">
+ 
+         <div class="feature-contnet-left">
+           <div class="feature-cntent-image">
+
+              {{ section.settings.mbg | image_url: width: 3840 | image_tag:
+          
+                height: '521',
+                preload: true,
+                sizes: "100vw",
+            class: 'mobile-image',
+            format: 'webp',
+                widths: '375, 550, 750, 1100, 1500'
+              }}
+              {{ section.settings.bg | image_url: width: 3840 | image_tag:
+      
+                height: '521',
+                preload: true,
+                sizes: "100vw",
+            class: 'desktop-image',
+            format: 'webp',
+                widths: '100 , 200 ,375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+              }}
+    
+           </div>
+           <div class="home-feature-centent-wrapper">
+            
+           <h1  class="poppins-extrabold-italic text-uppercase text-transparent-mobile text-underline text-transparent-mobile">{{ section.settings.h1 }}</h1>
+           <a href="{{ section.settings.link }}" class="{{ section.settings.vertical_alignment }}  d-inline-block">{{ section.settings.btn }}</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 d-flex align-items-center">
+      
+
+         <div class="feature-contnet-right">
+           <h3 class="poppins-bold">{{ section.settings.h2 }}</h3>
+           <p>{{ section.settings.p }}</p>
+           <a href="{{ section.settings.link }}" class="{{ section.settings.vertical_alignment }}  d-inline-block">{{ section.settings.btn }}</a>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+</div>
+<style>
+  .feature-contnet-right{
+    padding:2% 0;
+  }
+  .feature-content {
+    margin:20.5px 0;
+
+  }
+  .feature-contnet-right h3 {
+    font-size: 32px;
+    margin-bottom: 5%;
+}
+  .feature-contnet-right p{
+   color:rgba(30, 30, 30, 0.5);
+  }
+  .feature-cntent-image img {
+    border-radius: 24px;
+}
+  .feature-contnet-left{
+   position: relative;
+  }
+
+  .home-feature-centent-wrapper {
+  
+    position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+  }
+.feature-contnet-left h1{
+  font-size: 64px;
+  line-height: 1;
+  color: #fff;
+
+}
+.feature-cntent-image img {
+  border-radius: 24px;
+  width: 100%;
+}
+.home-feature-centent-wrapper a{
+ display: none;
+}
+@media only screen and (max-width: 750px) {
+  .home-feature-centent-wrapper a{
+    display: block;
+   }
+  .feature-contnet-left h1{
+    font-size: 40px;
+  
+  }
+  .feature-contnet-right{
+   display: none;
+  }
+}
+</style>
+{% schema %}
+  {
+    "name": "Home Feature Content",
+    "settings": [
+  {
+    "type": "image_picker",
+    "id": "bg",
+    "label": "Select your backgound"
+  },
+  {
+    "type": "image_picker",
+    "id": "mbg",
+    "label": "Select your backgound"
+  },
+  {
+    "type": "text",
+    "id": "h1",
+    "label": "Benner Title",
+    "default": "WHEY BETTER <br> THAN BOBA <br> TEA"
+  },  {
+    "type": "select",
+    "id": "vertical_alignment",
+    "label": "Button Style",
+    "options": [
+      {
+        "value": "btn-primary",
+        "label": "Primary "
+      },
+      {
+        "value": "btn-secondary",
+        "label": "secondary"
+      }
+    ],
+    "default": "btn-primary"
+  }
+, 
+  {
+    "type": "text",
+    "id": "h2",
+    "label": "Title",
+    "default": "Welkom bij onze eerste pre-order!"
+  },
+  {
+    "type": "text",
+    "id": "p",
+    "label": "Description",
+    "default": "Verzeker jezelf van dit smaakvolle, voedzame product door vooraf te bestellen. Geniet van exclusieve toegang, speciale kortingen en behoor tot de eersten die deze onweerstaanbare smaakervaring ervaren."
+  },
+  {
+    "type": "text",
+    "id": "btn",
+    "label": "Button title",
+    "default": "SHOP NU"
+  },
+  {
+    "type": "url",
+    "id": "link",
+    "label": "Benner link"
+  }
+    ],
+    "presets": [
+      {
+        "name": "Home Feature Content"}
+      ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

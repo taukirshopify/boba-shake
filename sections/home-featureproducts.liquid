@@ -1,0 +1,299 @@
+
+{% assign collection = collections[section.settings.collection] %}
+        
+{% assign on_sale = false %}
+{% if product.compare_at_price > product.price %}
+{% assign on_sale = true %}
+{% endif %}
+
+{% assign sold_out = true %}
+{% if product.available %}
+{% assign sold_out = false %}
+{% endif %}
+
+
+<div class="benner section-id-{{ section.id }}">
+
+
+
+     <div class="container-xxl reverse-mobile">
+      <div class="swiper-pagination"></div>
+       <div class="row">
+         <div class="col-lg-4">
+           <div class="fature-left">
+              <h2 class="poppins-bold">{{ section.settings.h2 }}</h2>
+              <p>{{ section.settings.p }}</p>
+              <a href="{{ section.settings.link }}" class="btn underline">{{ section.settings.btn }}</a>
+           </div>
+         </div>
+         <div class="col-lg-8">
+ 
+               {% comment %} inner - row  {% endcomment %}
+
+                 <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      {% for product in collection.products %}
+              
+      <div class="swiper-slide">
+        
+        <div class="singel-product">
+
+
+          {% if on_sale %}
+            <span class="onsale two"> {{ product.price | times: 100 | divided_by: product.compare_at_price | minus: 100 | abs }}% off </span>
+          {% endif %}
+
+
+          {% comment %}Date calculate{% endcomment %}
+          {% assign date_pub_y = product.published_at | date:'%Y' %}
+          {% assign date_pub_d = product.published_at | date:'%j' %}
+          {% assign date_now_y = 'now' | date:'%Y' %}
+          {% assign date_now_d = 'now' | date:'%j' %}
+          {% assign dates_diff_y = date_now_y | minus: date_pub_y | times: 365 %}
+          {% assign dates_diff_d = date_now_d | minus: date_pub_d %}
+          {% assign dates_diff = dates_diff_y | plus: dates_diff_d %}
+          {% assign new_products_period = new_products_final | plus: 0 %} 
+
+          {% if dates_diff <= new_products_period %}
+          <span class="onsale">{{ 'products.product.new' | t }}</span>
+          {% endif %}   
+
+
+          <img class="" alt="" src="{{ product.featured_image.src | img_url: 'large' }}">
+
+          <div class="s-product-content">
+          
+       
+          <svg xmlns="http://www.w3.org/2000/svg" width="86" height="14" viewBox="0 0 86 14" fill="none">
+            <path d="M78.5384 1.10999C78.7092 0.699341 79.2909 0.69934 79.4617 1.10999L80.9988 4.80558C81.0708 4.9787 81.2336 5.09698 81.4205 5.11197L85.4102 5.43182C85.8535 5.46736 86.0333 6.02061 85.6955 6.30995L82.6558 8.9138C82.5134 9.03578 82.4512 9.22717 82.4947 9.40955L83.4234 13.3028C83.5266 13.7354 83.056 14.0774 82.6764 13.8455L79.2607 11.7592C79.1007 11.6615 78.8994 11.6615 78.7394 11.7592L75.3237 13.8455C74.9441 14.0774 74.4735 13.7354 74.5767 13.3028L75.5054 9.40955C75.5489 9.22717 75.4867 9.03578 75.3443 8.9138L72.3046 6.30995C71.9668 6.02062 72.1466 5.46736 72.5899 5.43182L76.5796 5.11197C76.7665 5.09698 76.9293 4.9787 77.0013 4.80558L78.5384 1.10999Z" fill="#343839"/>
+            <path d="M60.5384 1.10999C60.7092 0.699341 61.2909 0.69934 61.4617 1.10999L62.9988 4.80558C63.0708 4.9787 63.2336 5.09698 63.4205 5.11197L67.4102 5.43182C67.8535 5.46736 68.0333 6.02061 67.6955 6.30995L64.6558 8.9138C64.5134 9.03578 64.4512 9.22717 64.4947 9.40955L65.4234 13.3028C65.5266 13.7354 65.056 14.0774 64.6764 13.8455L61.2607 11.7592C61.1007 11.6615 60.8994 11.6615 60.7394 11.7592L57.3237 13.8455C56.9441 14.0774 56.4735 13.7354 56.5767 13.3028L57.5054 9.40955C57.5489 9.22717 57.4867 9.03578 57.3443 8.9138L54.3046 6.30995C53.9668 6.02062 54.1466 5.46736 54.5899 5.43182L58.5796 5.11197C58.7665 5.09698 58.9293 4.9787 59.0013 4.80558L60.5384 1.10999Z" fill="#343839"/>
+            <path d="M42.5384 1.10999C42.7092 0.699341 43.2909 0.69934 43.4617 1.10999L44.9988 4.80558C45.0708 4.9787 45.2336 5.09698 45.4205 5.11197L49.4102 5.43182C49.8535 5.46736 50.0333 6.02061 49.6955 6.30995L46.6558 8.9138C46.5134 9.03578 46.4512 9.22717 46.4947 9.40955L47.4234 13.3028C47.5266 13.7354 47.056 14.0774 46.6764 13.8455L43.2607 11.7592C43.1007 11.6615 42.8994 11.6615 42.7394 11.7592L39.3237 13.8455C38.9441 14.0774 38.4735 13.7354 38.5767 13.3028L39.5054 9.40955C39.5489 9.22717 39.4867 9.03578 39.3443 8.9138L36.3046 6.30995C35.9668 6.02062 36.1466 5.46736 36.5899 5.43182L40.5796 5.11197C40.7665 5.09698 40.9293 4.9787 41.0013 4.80558L42.5384 1.10999Z" fill="#343839"/>
+            <path d="M24.5384 1.10999C24.7092 0.699341 25.2909 0.69934 25.4617 1.10999L26.9988 4.80558C27.0708 4.9787 27.2336 5.09698 27.4205 5.11197L31.4102 5.43182C31.8535 5.46736 32.0333 6.02061 31.6955 6.30995L28.6558 8.9138C28.5134 9.03578 28.4512 9.22717 28.4947 9.40955L29.4234 13.3028C29.5266 13.7354 29.056 14.0774 28.6764 13.8455L25.2607 11.7592C25.1007 11.6615 24.8994 11.6615 24.7394 11.7592L21.3237 13.8455C20.9441 14.0774 20.4735 13.7354 20.5767 13.3028L21.5054 9.40955C21.5489 9.22717 21.4867 9.03578 21.3443 8.9138L18.3046 6.30995C17.9668 6.02062 18.1466 5.46736 18.5899 5.43182L22.5796 5.11197C22.7665 5.09698 22.9293 4.9787 23.0013 4.80558L24.5384 1.10999Z" fill="#343839"/>
+            <path d="M6.53839 1.10999C6.70919 0.699341 7.29092 0.69934 7.46171 1.10999L8.9988 4.80558C9.0708 4.9787 9.23361 5.09698 9.4205 5.11197L13.4102 5.43182C13.8535 5.46736 14.0333 6.02061 13.6955 6.30995L10.6558 8.9138C10.5134 9.03578 10.4512 9.22717 10.4947 9.40955L11.4234 13.3028C11.5266 13.7354 11.056 14.0774 10.6764 13.8455L7.26068 11.7592C7.10067 11.6615 6.89943 11.6615 6.73943 11.7592L3.32368 13.8455C2.94413 14.0774 2.47351 13.7354 2.5767 13.3028L3.50539 9.40955C3.54889 9.22717 3.48671 9.03578 3.34431 8.9138L0.30458 6.30995C-0.0331884 6.02062 0.146574 5.46736 0.589901 5.43182L4.57961 5.11197C4.7665 5.09698 4.92931 4.9787 5.00131 4.80558L6.53839 1.10999Z" fill="#343839"/>
+            </svg>
+
+          <h3>   <a href="{{ product.url | within: collection }}">{{ product.title }}</a></h3>
+
+          <div class="tb-product-price font-noraure-3">
+            {% if on_sale %}
+            <span class="amount2 ana">{{ product.price | money }} - </span>
+            <span class="amount2 ana"><del>{{ product.compare_at_price | money }}</del></span>
+            {% else %}
+            <span class="amount2 ana">{{ product.price | money }} </span>
+            {% endif %}
+
+          </div>
+          {% if product.metafields.custom.tag_line.value %}
+            
+   
+              <div class="feature-list">
+
+
+{% assign selected_benefits = product.metafields.custom.tag_line.value | replace: '"', ' ' | replace: ']', ' '  | replace: '[', ' '  | split: ", "%}
+                {% for item in selected_benefits %}
+                  <span>{{ item }}</span>
+             
+                {% endfor %}
+               
+              </div>
+
+            {% endif %}
+
+            </div>
+
+        </div>
+
+      </div>
+      {% endfor %}
+      
+
+    </div>
+
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 2.2,
+      spaceBetween: 20,
+      breakpoints: {
+
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        }
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+
+               {% comment %} inner - row end {% endcomment %}
+     
+         </div>
+      </div>
+    </div>
+</div>
+<style>
+.section-id-{{ section.id }}{
+ padding:17.5px 0;
+}
+.s-product-content{
+ margin:  3% 0 ;
+}
+  .singel-product img {
+    border-radius: 12px;
+}
+.singel-product h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+.feature-list {
+  margin-top: 8px;
+}
+.feature-list span {
+  display: inline-block;
+  padding: 3px 12px;
+  margin-right:1%;
+  font-size: 15px;
+
+  border-radius: 8px;
+}
+.feature-list span:first-child{
+ background:#FAC39B;
+}
+.feature-list span:last-child{
+ background:#EDD6B9;
+}
+.swiper.mySwiper {
+  width: 100%;
+  overflow: hidden;
+}
+.swiper.mySwiper
+.m-dot-circle .m-dot--active:after, .m-dot-circle .m-dot-active:after, .m-dot-circle .swiper-pagination-bullet--active:after, .m-dot-circle .swiper-pagination-bullet-active:after, .swiper-pagination .m-dot--active:after, .swiper-pagination .m-dot-active:after, .swiper-pagination .swiper-pagination-bullet--active:after, .swiper-pagination .swiper-pagination-bullet-active:after {
+
+  width: var(--swiper-bullet-active-size, 16px);
+  height: var(--swiper-bullet-active-size, 16px);
+}
+.swiper.mySwiper
+.m-dot-circle .m-dot--active:before, .m-dot-circle .m-dot-active:before, .m-dot-circle .swiper-pagination-bullet--active:before, .m-dot-circle .swiper-pagination-bullet-active:before, .swiper-pagination .m-dot--active:before, .swiper-pagination .m-dot-active:before, .swiper-pagination .swiper-pagination-bullet--active:before, .swiper-pagination .swiper-pagination-bullet-active:before {
+  opacity: 1;
+}
+.section-id-{{ section.id }}
+.swiper-pagination {
+  display: flex;
+  justify-content: right;
+
+
+}
+
+.fature-left h3{
+ font-size:39px;
+}
+.fature-left p {
+  color: rgba(30, 30, 30, 0.5);
+  margin: 12px 0 20px 0;
+}
+.fature-left {
+  padding: 20px 0;
+}
+@media only screen and (max-width: 750px) {
+
+
+
+  .section-id-{{ section.id }}
+  .swiper-pagination {
+
+    justify-content: center;
+}
+
+
+
+  .section-id-{{ section.id }} .reverse-mobile{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .feature-list span {
+
+    padding: 3px 10px;
+
+    font-size: 12px;
+
+}
+.fature-left {
+  padding: 20px ;
+}
+.swiper.mySwiper {
+
+  padding: 20px;
+}
+.singel-product h3 {
+  font-size: 14px;
+ 
+}
+.fature-left h2{
+  font-size: 32px;
+}
+}
+@media only screen and (max-width: 550px) {
+  .feature-list span {
+
+    padding: 3px 6px;
+
+    font-size: 10px;
+
+}
+
+}
+</style>
+{% schema %}
+  {
+    "name": "Home Feature Products",
+    "settings": [
+{
+  "type": "collection",
+  "id": "collection",
+  "label": "Select your Colllection"
+},
+  {
+    "type": "text",
+    "id": "h2",
+    "label": "Title",
+    "default": "Trending"
+  },
+  {
+    "type": "text",
+    "id": "p",
+    "label": "Description",
+    "default": "Dagelijkse voeding met Aziatisch geïnspireerde smaak"
+  },
+  {
+    "type": "text",
+    "id": "btn",
+    "label": "Button title",
+    "default": "SHOP NU"
+  },
+  {
+    "type": "url",
+    "id": "link",
+    "label": "Benner link"
+  }
+    ],
+    "presets": [
+      {
+        "name": "Home Feature Products"}
+      ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

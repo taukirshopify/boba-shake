@@ -1,0 +1,195 @@
+<style>
+  .new-announcement.section-id-{{ section.id }} {
+    background: {{ section.settings.bg }};
+    color: {{ section.settings.color }};
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    column-gap: 24px;
+}
+  .section-id-{{ section.id }} .ann-items {
+    display: flex;
+    column-gap: 24px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-shrink: 0;
+    animation: carouselAnimation infinite linear;
+    animation-duration: {{section.settings.timer}}s;
+    font-size: {{ section.settings.font-size }}px;
+
+    
+    @media only screen and (max-width: 750px) {
+      font-size: {{ section.settings.font-size2 }}px;
+    
+    }
+
+}
+.ann-item {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+ .section-id-{{ section.id }} .ann-item svg {
+    height: {{ section.settings.icon-size }}px;
+    width: {{ section.settings.icon-size }}px;
+    color: {{ section.settings.color }};
+}
+ .section-id-{{ section.id }} .ann-item img {
+    height: {{ section.settings.icon-size }}px;
+}
+  @keyframes carouselAnimation{
+  0%{
+      transform: translateX(-100%)
+  }
+  100%{
+      transform: translateX(0%)
+  }
+  }
+</style>
+
+<div class="new-announcement section-id-{{ section.id }}">
+  <div class="ann-items">
+    {% for block in section.blocks %}
+        <div class="ann-item">
+          {% if block.settings.icon %}
+            <img src="{{ block.settings.icon | img_url: '80x' }}" height="auto" sizes="100" width="auto">
+          {% elsif block.settings.svg != '' %}
+            {{ block.settings.svg }}
+          {% endif %}
+          <div class="ann-text">
+            {{ block.settings.title }}
+          </div>
+        </div>
+    {% endfor %}
+    {% for block in section.blocks %}
+        <div class="ann-item">
+          {% if block.settings.icon %}
+            <img src="{{ block.settings.icon | img_url: '80x' }}" height="auto" sizes="100" width="auto">
+          {% elsif block.settings.svg != '' %}
+            {{ block.settings.svg }}
+          {% endif %}
+          <div class="ann-text">
+            {{ block.settings.title }}
+          </div>
+        </div>
+    {% endfor %}
+  </div>
+  <div class="ann-items">
+    {% for block in section.blocks %}
+        <div class="ann-item">
+          {% if block.settings.icon %}
+            <img src="{{ block.settings.icon | img_url: '80x' }}" height="auto" sizes="100" width="auto">
+          {% elsif block.settings.svg != '' %}
+            {{ block.settings.svg }}
+          {% endif %}
+          <div class="ann-text">
+            {{ block.settings.title }}
+          </div>
+        </div>
+    {% endfor %}
+    {% for block in section.blocks %}
+        <div class="ann-item">
+          {% if block.settings.icon %}
+            <img src="{{ block.settings.icon | img_url: '80x' }}" height="auto" sizes="100" width="auto">
+          {% elsif block.settings.svg != '' %}
+            {{ block.settings.svg }}
+          {% endif %}
+          <div class="ann-text">
+            {{ block.settings.title }}
+          </div>
+        </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "New Announcement",
+    "settings": [
+      {
+        "type": "color",
+        "id":"bg",
+        "label": "Background",
+        "default": "#F3DEC3"
+      },
+      {
+        "type": "color",
+        "id":"color",
+        "label": "Text Color",
+        "default": "#000000"
+      },
+      {
+        "type": "range",
+        "id":"timer",
+        "label": "Animation speed",
+        "default": 20,
+        "max": 60,
+        "min": 1,
+        "step": 1,
+        "unit": "S"
+      },
+      {
+        "type": "range",
+        "id":"font-size",
+        "label": "Desktop Font Size",
+        "default": 14,
+        "max": 60,
+        "min": 10,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id":"font-size2",
+        "label": "Mobile Font Size",
+        "default": 18,
+        "max": 60,
+        "min": 10,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id":"icon-size",
+        "label": "Icon Size",
+        "default": 20,
+        "max": 60,
+        "min": 10,
+        "step": 1,
+        "unit": "px"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Block",
+        "name": "Text Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Image Icon"
+          },
+          {
+            "type": "html",
+            "id": "svg",
+            "label": "Html Icon"
+          },
+          {
+            "type": "richtext",
+            "id": "title",
+            "label": "Title",
+            "default": "<p>Free Shipping</p>"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

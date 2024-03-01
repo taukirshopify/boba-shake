@@ -1,0 +1,132 @@
+{
+  "sections": {
+    "2160d3aa-80d6-48e1-9103-46d9734327a3": {
+      "type": "slider",
+      "blocks": {
+        "template--15890563530799__2160d3aa-80d6-48e1-9103-46d9734327a3-slider_item-2": {
+          "type": "slider_item",
+          "settings": {
+            "background": "shopify:\/\/shop_images\/Boba_shake_-_claims_2.png",
+            "content_in_container": false,
+            "content_position": "center middle",
+            "text_alignment": "center",
+            "text_size": "medium",
+            "text_color": "black",
+            "subheading": "",
+            "title": "",
+            "description": "",
+            "image_link": "",
+            "button_text": "",
+            "button_link": "",
+            "button_style": "m-button--primary",
+            "button_size": "",
+            "show_footer": false,
+            "footer_alignment": "end",
+            "footer_text": "New Collection",
+            "footer_button": "Shop Now",
+            "footer_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15890563530799__2160d3aa-80d6-48e1-9103-46d9734327a3-slider_item-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "w-full",
+        "slideshow_height": "adapt",
+        "show_overlay": false,
+        "dots_position": "bottom",
+        "dots_color": "dark",
+        "show_dots": true,
+        "show_arrows": false,
+        "autorotate": false,
+        "autorotate_speed": 5,
+        "use_content_above": false,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "main": {
+      "type": "page-contact",
+      "blocks": {
+        "0d4aee0d-5846-40a7-bb67-895dfeae880b": {
+          "type": "textblock",
+          "settings": {
+            "title": "Informatie",
+            "content": "Handelsnaam; Emmerce & Media\n<br>KVK: 76128016\n<br>BTW-nr: NL003046100B89\n<br>Adres: Voorstraat 414\n<br>Postcode: 8226KE Lelystad"
+          }
+        }
+      },
+      "block_order": [
+        "0d4aee0d-5846-40a7-bb67-895dfeae880b"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h3 {font-size: 25px;}",
+        "div {font-size: 18px;}",
+        ".m-contact-information .m-contact-information__textblock {margin: auto;}",
+        ".m-contact-information {margin-top: -35px;}"
+      ],
+      "settings": {
+        "container": "container"
+      }
+    },
+    "contact-form": {
+      "type": "contact-form",
+      "blocks": {
+        "text-block-1": {
+          "type": "textblock",
+          "disabled": true,
+          "settings": {
+            "title": "Address",
+            "content": "<p>7895 Piermont Dr NE Albuquerque, NM 198866, <a href=\"#\">See Our Stores<\/a><\/p>"
+          }
+        },
+        "text-block-2": {
+          "type": "textblock",
+          "disabled": true,
+          "settings": {
+            "title": "Information",
+            "content": "<p>+391 (0)35 2568 4593<\/p><p>hello@domain.com<\/p>"
+          }
+        },
+        "text-block-3": {
+          "type": "socialmedia",
+          "disabled": true,
+          "settings": {
+            "title": "Social Media"
+          }
+        },
+        "text-block-4": {
+          "type": "textblock",
+          "disabled": true,
+          "settings": {
+            "title": "We're Open",
+            "content": "<p>Our store has re-opened for shopping, exchanges<\/p><p>Every day 11am to 7pm<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text-block-1",
+        "text-block-2",
+        "text-block-3",
+        "text-block-4"
+      ],
+      "settings": {
+        "container": "container",
+        "title": "Vragen? Wij staan voor je klaar!",
+        "description": "",
+        "show_name": true,
+        "show_phone": false,
+        "show_signup_email": true,
+        "animations": "inherit"
+      }
+    }
+  },
+  "order": [
+    "2160d3aa-80d6-48e1-9103-46d9734327a3",
+    "main",
+    "contact-form"
+  ]
+}

@@ -1,0 +1,401 @@
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "breadcrumb",
+      "settings": {
+        "container": "container",
+        "text_alignment": "left",
+        "hide_current": false,
+        "hide_on_mb": false,
+        "animations": "inherit"
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "bff43ff8-895a-418a-9275-7ab9d794d406": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "1da310f7-9c11-44f0-9fb7-9afb44023e4f": {
+          "type": "prod-tag",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_saving": false,
+            "sale_badge_type": "percentage"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "size_title": "Size"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_atc_button": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "038aae3c-8bc1-4b59-83a9-64552b304b4b": {
+          "type": "shopify:\/\/apps\/foxkit-sales-boost\/blocks\/countdown-timer\/13f41957-6b79-47c1-99a2-e52431f06fff",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "4b5a8199-69b7-4a16-9247-a421c1386c70": {
+          "type": "shipping",
+          "settings": {
+            "show_delivery_times": false,
+            "deliver_text": "Estimated Delivery:",
+            "deliver_days": "7",
+            "date_format": "%b %d",
+            "show_shipping_text": true,
+            "shipping_text": "<p><strong>Gratis Verzending: <\/strong>Voor alle pre-orders boven €60,-. Anders €4,95<\/p>"
+          }
+        },
+        "a374c38f-5027-487d-bddd-e55f82482b29": {
+          "type": "shopify:\/\/apps\/trust-badges-bear\/blocks\/widget\/163a9b59-0ec2-4cb7-bf5c-31408b4a9420",
+          "settings": {
+          }
+        },
+        "1c47be05-156c-4ee7-98aa-543104d4e596": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "✓ Productietijd +\/- 6 weken✓ Verstuurt vanuit Nederland ✓ In Nederland geproduceerd ✓ De eerste bubble tea whey protein smaak in Nederland✓ Veilig afrekenen met o.a. iDeal & Klarna",
+            "text_style": "body"
+          }
+        },
+        "6a2481d6-c846-4d2e-85e3-029a9bec6f76": {
+          "type": "custom_text",
+          "settings": {
+            "content": "<p>✓ Productietijd +\/- 6 weken<br\/>✓ Verstuurd vanuit Nederland <br\/>✓ In Nederland geproduceerd <br\/>✓ De eerste bubble tea whey protein smaak in Nederland<br\/>✓ Veilig afrekenen met iDeal<\/p>"
+          }
+        },
+        "0f064d5b-c519-4fb2-a1ec-82da87b713ec": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Product Informatie",
+            "content": "",
+            "liquid": "{{product.description}}",
+            "default_open": false
+          }
+        },
+        "ee56a869-a4b4-4ddb-a6cf-a73537c4c263": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Pre-order & Levering",
+            "content": "<p>Welkom bij onze verzending-pagina, waar transparantie en anticipatie hand in hand gaan! Bij BobaShake.nl streven we ernaar om je pre-order zo soepel mogelijk te laten verlopen.<\/p><p><strong>Wat je moet weten:<\/strong><\/p><p><strong>1. Productieperiode:<\/strong><\/p><ul><li>Je hebt zojuist een pre-order geplaatst voor onze exclusieve Classic Bubble Tea Whey Protein. We nemen de tijd om elk product met de grootste zorg te produceren, en dit proces duurt gemiddeld 5-6 weken. Uiteraard proberen wij deze tijd te verkorten.<\/li><\/ul><p><strong>2. Verzendvoorbereiding:<\/strong><\/p><ul><li>Zodra jouw whey protein vers is bereid, wordt het zorgvuldig verpakt en gereedgemaakt voor verzending. Ons toegewijde team zorgt ervoor dat jouw bestelling veilig en in optimale staat aankomt.<\/li><\/ul><p><strong>3. Verzendduur:<\/strong><\/p><ul><li>Na de productieperiode wordt jouw Classic Bubble Tea Whey Protein verzonden. De bezorgduur kan variëren, maar we streven ernaar om het product binnen de kortst mogelijke tijd bij jou thuis te bezorgen (circa 1-2 dagen).<\/li><\/ul><p><strong>4. Updates onderweg:<\/strong><\/p><ul><li>We begrijpen dat je enthousiast bent om je pre-order te ontvangen. Gedurende het hele proces houden we je regelmatig op de hoogte van de status van jouw bestelling via e-mail.<\/li><\/ul><p><strong>5. Klantenservice:<\/strong><\/p><ul><li>Heb je vragen over je bestelling? Ons klantenserviceteam staat klaar om je te helpen. Neem gerust contact met ons op, en we zullen ons best doen om jouw vragen te beantwoorden.<\/li><\/ul><p>Dank je wel voor je geduld en anticipatie! We zijn ervan overtuigd dat de wachttijd de moeite waard zal zijn zodra je de heerlijke smaak van Classic Bubble Tea Whey Protein ervaart. Bij BobaShake.nl geloven we in kwaliteit, zorg en tevreden klanten.<\/p>",
+            "liquid": "",
+            "default_open": false
+          }
+        },
+        "e2f270af-73f0-4c0c-8636-ca4059b4c022": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingredienten",
+            "content": "<p><strong>Ingredienten:<\/strong><br\/>Whey protein concentrate (milk), MCT oil, acacia fibers, thickener: guar gum, green tea extract, flavor, emulsifier: lecithin, sweetener: steviol glycosides from stevia, sweetener: sucralose.<br\/><br\/><strong>Allergens: <\/strong>Constains milk. May contain traces of glutes, fish, groundnuts, and soy<\/p>",
+            "liquid": "",
+            "default_open": false
+          }
+        },
+        "07c84001-d40e-4983-b61a-ac1d99090346": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Geadviseerd gebruik",
+            "content": "<ul><li>Meng 30 gram (c.a. 1 maatschep) met 250 ml water of melk.<\/li><li>Neem een of meerdere shakes per dag, afhankelijk van de behoefte en trainingsintensiteit.<br\/><br\/><strong>Waarschuwingen<br\/><\/strong><\/li><li>Een voedingssupplement mag niet als een vervanging van gevarieerde, evenwichtige voeding en gezonden leefstijl worden gebruikt.<\/li><li>Aanbevolen dosering niet overschrijden.<\/li><li>Niet geschikt voor jonge kinderen.<\/li><li>Zwangere vrouwen dienen voor gebruik van dit product een deskundige te raadplegen.<\/li><li>Voedingssupplement met zoetstoffen.<\/li><\/ul>",
+            "liquid": "",
+            "default_open": false
+          }
+        },
+        "d07b788e-244f-4bec-ae50-2db803c554f7": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Allergenen",
+            "content": "<p>Bevat melk. Kan mogelijk sporen van gluten, ei en soja bevatten.<\/p>",
+            "liquid": "",
+            "default_open": false
+          }
+        },
+        "c1c00002-2119-4422-9f29-9c35f629b008": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Bewaaradvies",
+            "content": "<p>Bewaar op een koele en droge plek en buiten bereik van jonge kinderen. Na opening beperkt houdbaar.<\/p>",
+            "liquid": "",
+            "default_open": false
+          }
+        }
+      },
+      "block_order": [
+        "bff43ff8-895a-418a-9275-7ab9d794d406",
+        "title",
+        "1da310f7-9c11-44f0-9fb7-9afb44023e4f",
+        "price",
+        "variant_picker",
+        "buy_buttons",
+        "038aae3c-8bc1-4b59-83a9-64552b304b4b",
+        "4b5a8199-69b7-4a16-9247-a421c1386c70",
+        "a374c38f-5027-487d-bddd-e55f82482b29",
+        "1c47be05-156c-4ee7-98aa-543104d4e596",
+        "6a2481d6-c846-4d2e-85e3-029a9bec6f76",
+        "0f064d5b-c519-4fb2-a1ec-82da87b713ec",
+        "ee56a869-a4b4-4ddb-a6cf-a73537c4c263",
+        "e2f270af-73f0-4c0c-8636-ca4059b4c022",
+        "07c84001-d40e-4983-b61a-ac1d99090346",
+        "d07b788e-244f-4bec-ae50-2db803c554f7",
+        "c1c00002-2119-4422-9f29-9c35f629b008"
+      ],
+      "settings": {
+        "container": "container",
+        "layout": "layout-6",
+        "show_atwl": false,
+        "enable_history_state": false,
+        "enable_variant_group_images": false,
+        "show_featured_media": true,
+        "show_zoom_button": true,
+        "enable_video_autoplay": false,
+        "show_nav_media_mobile": true,
+        "show_pagination_mobile": true,
+        "use_sticky_atc": true,
+        "use_sticky_atc_on_mobile": true,
+        "enable_dynamic_checkout": false,
+        "sticky_atc_wishtlist": false,
+        "sticky_atc_compare": false
+      }
+    },
+    "product-details-tabs": {
+      "type": "product-details-tabs",
+      "disabled": true,
+      "settings": {
+        "container": "container",
+        "bg_color": "",
+        "default_open": true,
+        "animations": "inherit"
+      }
+    },
+    "661ad7a8-bad2-4512-a5b2-72298d2cdfbd": {
+      "type": "image-with-text-2",
+      "settings": {
+        "container": "w-full",
+        "hero_size": "adapt",
+        "show_overlay": false,
+        "image": "shopify:\/\/shop_images\/Boba_shake_-_claims_2_8efada81-9a1a-4fb7-abf6-bad02b3749f4.png",
+        "bg_position": "center",
+        "image_link": "",
+        "parallax": false,
+        "content_in_container": false,
+        "content_position": "center middle",
+        "text_alignment": "center",
+        "text_size": "medium",
+        "text_color": "white",
+        "title": "",
+        "subtitle": "",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "m-button--primary",
+        "button_size": "",
+        "text_alignment_mobile": "center",
+        "mb_image": "shopify:\/\/shop_images\/Boba_shake_-_claims_800_x_800_px_6f39e94c-52df-42c7-b4ad-43274f6d67d6.png",
+        "use_content_above": false,
+        "custom_class": "",
+        "animations": "inherit",
+        "enable_bg_zoom_effect": true
+      }
+    },
+    "72967324-c798-40eb-a786-087f635bf139": {
+      "type": "pagefly-section",
+      "settings": {
+        "section_id": "pf-1fa44f0d"
+      }
+    },
+    "67162825-5641-492c-8133-34d8349978c4": {
+      "type": "image-with-text-2",
+      "disabled": true,
+      "settings": {
+        "container": "container",
+        "hero_size": "adapt",
+        "show_overlay": false,
+        "image": "shopify:\/\/shop_images\/Screenshot_7.png",
+        "bg_position": "center",
+        "image_link": "",
+        "parallax": false,
+        "content_in_container": false,
+        "content_position": "center middle",
+        "text_alignment": "center",
+        "text_size": "medium",
+        "text_color": "white",
+        "title": "",
+        "subtitle": "",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "m-button--primary",
+        "button_size": "",
+        "text_alignment_mobile": "center",
+        "use_content_above": false,
+        "custom_class": "",
+        "animations": "inherit",
+        "enable_bg_zoom_effect": true
+      }
+    },
+    "45a4f58c-c2ec-418f-9e7d-ed4dd18232a5": {
+      "type": "image-with-text",
+      "settings": {
+        "heading": "",
+        "heading_size": "h3",
+        "subheading": "",
+        "container": "container-fluid",
+        "background_color": "rgba(0,0,0,0)",
+        "item_gap": 110,
+        "item_gap_mobile": 30,
+        "image": "shopify:\/\/shop_images\/Bobashake_-_IG_posts_design_3.png",
+        "link": "",
+        "layout": "right",
+        "image_column_size": "6",
+        "hover_effect": false,
+        "title": "GRATIS Shaker Bottle",
+        "sub_title": "",
+        "text": "<p>Ontvang een gratis Boba Shake Shaker Bottle bij je pre-order. Let op: alleen <strong>de eerste 50<\/strong> <strong>pre-orders<\/strong> ontvangen dit. Dus weer er snel bij!<\/p>",
+        "text_size": "medium",
+        "content_alignment": "left",
+        "button_label": "PRE-ORDER NU!",
+        "button_link": "shopify:\/\/products\/classic-milk-tea",
+        "button_style": "m-button--primary",
+        "button_size": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": "",
+        "animations": "inherit"
+      }
+    },
+    "29deb144-b0c2-4fcd-b0fe-40a544297041": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "template--15890563989551__29deb144-b0c2-4fcd-b0fe-40a544297041-item-1": {
+          "type": "item",
+          "settings": {
+            "header": "Waarom zou ik pre-orderen in plaats van wachten tot het product beschikbaar is?",
+            "content": "<p>Door vooraf te bestellen, krijg je exclusieve toegang tot ons product voordat het op de markt komt. Je bent verzekerd van verse, hoogwaardige kwaliteit en je krijgt ook toegang tot exclusieve kortingen die alleen beschikbaar zijn voor pre-orders. Daarnaast houden nog wij geen voorraad aan. Mocht je de pre-order missen dan zal je moeten wachten tot de volgende pre-order datum.<\/p>",
+            "content_page": "",
+            "open": false
+          }
+        },
+        "template--15890563989551__29deb144-b0c2-4fcd-b0fe-40a544297041-item-2": {
+          "type": "item",
+          "settings": {
+            "header": "Hoe lang duurt het voordat mijn pre-order wordt bezorgd?",
+            "content": "<p>Het duurt ongeveer een kleine 6 weken voordat we je Classic Bubble Tea Whey Protein produceren, klaarmaken en verzenden. Gedurende deze tijd zorgen we ervoor dat elk product met zorg wordt vervaardigd, zodat je de beste smaakervaring krijgt wanneer het bij je thuis wordt afgeleverd.<\/p>",
+            "content_page": "",
+            "open": false
+          }
+        },
+        "327209ad-ed2f-45d5-8cd0-54b70518d38b": {
+          "type": "item",
+          "settings": {
+            "header": "Is Classic Bubble Tea Whey Protein geschikt voor mijn dieet?",
+            "content": "<p>Ja, onze Classic Bubble Tea Whey Protein is geschikt voor verschillende diëten. Het is hoog in eiwitten en laag in suiker en koolhydraten.<\/p><p><\/p><p><strong>Waarschuwingen<br\/><\/strong><\/p><p>- Een voedingssupplement mag niet als een vervanging van gevarieerde, evenwichtige voeding en gezonden leefstijl worden gebruikt.<\/p><p>- Aanbevolen dosering niet overschrijden.<\/p><p>- Niet geschikt voor jonge kinderen.<\/p><p>- Zwangere vrouwen dienen voor gebruik van dit product een deskundige te raadplegen.<\/p><p>- Voedingssupplement met zoetstoffen.<\/p>",
+            "content_page": "",
+            "open": false
+          }
+        },
+        "97db195b-85fb-4b52-bc2f-57d07ded2ed7": {
+          "type": "item",
+          "settings": {
+            "header": "Wat als ik mijn pre-order wil annuleren?",
+            "content": "<p>We begrijpen dat plannen kunnen veranderen. Als je je pre-order wilt annuleren, neem dan zo snel mogelijk contact met ons op via onze klantenservice. We zullen ons best doen om je te helpen. Houd er echter rekening mee dat er mogelijk beperkingen gelden, afhankelijk van de fase van de productie.<\/p>",
+            "content_page": "",
+            "open": false
+          }
+        },
+        "e734443e-af61-47ca-8679-0f0f8705663c": {
+          "type": "item",
+          "settings": {
+            "header": "Betaal ik vooraf bij een pre-order?",
+            "content": "<p>Ja, bij een pre-order betaal je vooraf. Het doel van een pre-order is om je product te reserveren voordat het officieel wordt uitgebracht. Door vooraf te betalen, verzeker je jezelf van het product en krijg je vaak toegang tot exclusieve voordelen, zoals vroegtijdige toegang, kortingen of speciale bundelaanbiedingen. Bij ons Classic Bubble Tea Whey Protein-pre-orderprogramma kun je gerust zijn dat je betaling veilig wordt verwerkt, en je bestelling wordt met zorg behandeld, zodat je kunt uitkijken naar een verse en heerlijke ervaring zodra het product beschikbaar is.<\/p>",
+            "content_page": "",
+            "open": false
+          }
+        },
+        "26730c6c-4c3c-40f3-9400-6c4f9055cc77": {
+          "type": "item",
+          "settings": {
+            "header": "Zitten er tapioca ballen in?",
+            "content": "<p>Nee, ons boba shake-eiwitpoeder wordt geleverd zonder tapioca ballen. Wellicht zal dit in de toekomst wel gebeuren.<\/p>",
+            "content_page": "",
+            "open": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15890563989551__29deb144-b0c2-4fcd-b0fe-40a544297041-item-1",
+        "template--15890563989551__29deb144-b0c2-4fcd-b0fe-40a544297041-item-2",
+        "327209ad-ed2f-45d5-8cd0-54b70518d38b",
+        "97db195b-85fb-4b52-bc2f-57d07ded2ed7",
+        "e734443e-af61-47ca-8679-0f0f8705663c",
+        "26730c6c-4c3c-40f3-9400-6c4f9055cc77"
+      ],
+      "settings": {
+        "container": "container-narrow",
+        "background_color": "#f3dec3",
+        "heading": "Veelgestelde vragen",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "animations": "inherit"
+      }
+    },
+    "61ec4b5f-8cb9-49fe-a6d2-056945a65297": {
+      "type": "instagram",
+      "settings": {
+        "heading": "#bobashake",
+        "heading_size": "h3",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "background_color": "#ffffff",
+        "layout": "grid",
+        "images_count": 8,
+        "grid_columns": 4,
+        "gap": 30,
+        "mobile_gap": 10,
+        "profile": "https:\/\/www.instagram.com\/bobashakeshop\/",
+        "button_label": "",
+        "padding_top": 50,
+        "padding_bottom": 0,
+        "custom_class": ""
+      }
+    }
+  },
+  "order": [
+    "breadcrumb",
+    "main",
+    "product-details-tabs",
+    "661ad7a8-bad2-4512-a5b2-72298d2cdfbd",
+    "72967324-c798-40eb-a786-087f635bf139",
+    "67162825-5641-492c-8133-34d8349978c4",
+    "45a4f58c-c2ec-418f-9e7d-ed4dd18232a5",
+    "29deb144-b0c2-4fcd-b0fe-40a544297041",
+    "61ec4b5f-8cb9-49fe-a6d2-056945a65297"
+  ]
+}
